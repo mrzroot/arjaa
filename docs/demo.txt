@@ -1,0 +1,93 @@
+arjaa 0.1.0 · thesis.docx · 55 paragraphs
+floats: 5 «شکل», 2 «جدول» · 6 mention(s), 0 Word cross-reference field(s) · 3 chapters
+references: 9 entries (author-year) · 9 citation(s) recognised in the text
+
+✗ A101 the same caption number is used twice   [¶34]
+      ¶34  ⁦شکل ۳-۱: ساختار شبکه⸱ی حسگر⁩   — same number as ¶32
+    why : Two figures (or tables) with one number make every in-text reference ambiguous.
+    fix : Renumber one of them; if the captions use Word's SEQ field, press Ctrl+A, F9.
+
+✗ A201 mention of a figure/table that has no caption   [¶15]
+      ¶15  ⁦مقایسه⸱ی دو روش در شکل ⟦۲-۳⟧ و نمودار ۲-۱ نشان داده⁩   — captions: ۲-۱, ۲-۲, ۲-۴, ۳-۱
+    why : The text points at a number that does not exist in this document (typo, deleted figure, or a number from another chapter).
+    fix : Correct the mention or add the missing caption.
+
+✗ A321 citation without a matching reference entry   [¶14]
+      ¶14  ⁦Johnson, 2017⁩
+    why : No entry has this author (and year) in the list.
+    fix : Add the entry, or correct the name.
+
+✗ A322 citation year differs from the reference entry   [2× ¶6  ¶11]
+       ¶6  ⁦Brown, 2031⁩   — list has Brown with 2018
+      ¶11  ⁦احمدی، ۱۴۰۱⁩   — list has احمدی with ۱۴۰۰
+    why : The list has this author, but with another year: usually a typo, or one of two works by the same author.
+    fix : Make the year in the text and in the list agree.
+
+! A102 caption numbers skip or go backwards   [¶17]
+      ¶17  ⁦شکل ۲-۴: مقایسه⸱ی دو روش⁩   — skips ۲-۳
+    why : A gap usually means a figure was deleted or moved and the numbers were typed by hand; a backwards step means one was pasted in from another chapter.
+    fix : Renumber (Insert → Caption does it automatically), then update every mention.
+
+! A103 caption chapter prefix does not match the chapter it sits in   [¶36]
+      ¶36  ⁦جدول ۲-۲: پارامترهای آزمایش⁩   — sits in chapter 3
+    why : «شکل ۲-۴» inside chapter 3 usually means the caption was copied from another chapter and not renumbered.
+    fix : Fix the typed chapter part; with SEQ captions, keep the chapter number in the label text up to date.
+
+! A202 figure/table never mentioned in the text   [2× ¶13  ¶17]
+      ¶13  ⁦شکل ۲-۲: نمودار خطا بر حسب تعداد خوشه⁩
+      ¶17  ⁦شکل ۲-۴: مقایسه⸱ی دو روش⁩
+    why : Most universities expect every figure and table to be introduced in the text before it appears.
+    fix : Add a sentence such as «نتایج در شکل ۲-۳ آمده است» or remove the figure.
+
+! A210 mention of a chapter that does not exist   [¶5]
+       ¶5  ⁦ل سوم می⸱آید و نتایج در ⟦فصل ۷⟧ گزارش می⸱شود.⁩   — the thesis has 3 chapters
+    why : For example «در فصل ۷» in a thesis with five chapters.
+    fix : Correct the chapter number.
+
+! A323 reference entry never cited   [4× ¶50  ¶51  ¶52  ¶53]
+      ¶50  ⁦Miller, A. (1399). Outlier handling in clustering. Data Letters, 3(4), 20–31.⁩
+      ¶51  ⁦Wang, L. (2019). A survey of density-based clustering. Survey Quarterly, 7(1), 5–40.⁩
+      ¶52  ⁦کاظمی، حسین (2019). مقایسه⸱ی روش⸱های خوشه⸱بندی. پایان⸱نامه⸱ی کارشناسی ارشد، دانشگاه نمونه.⁩
+      ¶53  ⁦Zhou, Q. (2032). Forthcoming results on sensor drift. Preprint.⁩
+    why : Listed in the references but not cited in the text (only parenthetical citations with a clear author and year, and narrative ones, are recognised).
+    fix : Cite it or remove it.
+
+! A331 Latin-script entry with a Jalali-range year   [¶50]
+      ¶50  ⁦Miller, A. (1399). Outlier handling in clustering. Data Letters, 3(4), 20–31.⁩   — year 1399
+    why : A year like 1399 on an English reference is almost always a typo or a pasted Persian entry.
+    fix : Check the year.
+
+! A332 year in the future   [2× ¶53  ¶6]
+      ¶53  ⁦Zhou, Q. (2032). Forthcoming results on sensor drift. Preprint.⁩   — year 2032
+       ¶6  ⁦Brown, 2031⁩   — year 2031
+    why : Citation or entry year is later than the current year (Gregorian) or Jalali year.
+    fix : Check the year.
+
+! A341 duplicate or near-duplicate reference entries   [¶49]
+      ¶49  ⁦Brown, T. (2018). Calibrating low-cost temperature sensors. Sensor Notes, 4(1), 1–9.⁩   — same as ¶48
+    why : The same work listed twice (it will then be cited twice, under two numbers).
+    fix : Keep one entry.
+
+· A105 captions typed by hand (no SEQ field)   [3× ¶17  ¶34  ¶36]
+      ¶17  ⁦شکل ۲-۴: مقایسه⸱ی دو روش⁩
+      ¶34  ⁦شکل ۳-۱: ساختار شبکه⸱ی حسگر⁩
+    why : Typed numbers do not follow when a figure is inserted or removed; Word's Insert → Caption keeps them in step.
+    fix : Optional: re-insert the captions with Insert → Caption.
+
+· A203 mentions use a caption label nobody uses   [¶15]
+      ¶15  ⁦روش در شکل ۲-۳ و نمودار ⟦۲-۱⟧ نشان داده شده است.⁩   — 1× «نمودار»; captions use «شکل», «جدول»
+    why : The text says «نمودار ۲-۱» but the captions say «شکل …» (or the reverse), so the two cannot be matched.
+    fix : Use one word per kind of float in captions and in text.
+
+· A204 mentions are typed, not Word cross-references   [ …]
+      doc  ⁦6 typed mention(s), 0 Word cross-reference fields⁩
+    why : A mention typed by hand does not change when a caption is renumbered; Insert → Cross-reference keeps them in step.
+    fix : Optional: replace typed mentions with Insert → Cross-reference (then update fields before exporting).
+
+· A333 Persian-script entry with a Gregorian year   [¶52]
+      ¶52  ⁦کاظمی، حسین (2019). مقایسه⸱ی روش⸱های خوشه⸱بندی. پایان⸱نامه⸱ی کارشناسی ارشد، دانشگاه نمونه.⁩   — year 2019
+    why : Not wrong (some sources are dated that way), but mixed calendars confuse readers and in-text matching.
+    fix : Be consistent: Jalali for Persian sources, Gregorian for the others.
+
+4 error(s), 8 warning(s), 4 note(s). arjaa reports; it never edits your file.
+Heuristics, not a university validator: mentions and citations are found by pattern. Footnotes, text boxes and Zotero/EndNote fields are not read.
