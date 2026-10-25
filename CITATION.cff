@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use arjaa, please cite it as below."
+title: "arjaa: an offline cross-reference and citation check for a Persian Word thesis"
+type: software
+version: 0.1.0
+date-released: 2026-10-24
+license: MIT
+repository-code: "https://github.com/mrzroot/arjaa"
+url: "https://mrzroot.github.io/arjaa/"
+authors:
+  - family-names: Zare
+    given-names: Mohammadreza
+keywords:
+  - persian
+  - farsi
+  - thesis
+  - docx
+  - citations
+  - references
+  - jalali
+abstract: "Offline, dependency-free command-line check of a Persian .docx: figure and table numbers and mentions, in-text citations against the reference list, Jalali and Gregorian years. Reports only; never edits the file. Heuristics, not an official validator."
