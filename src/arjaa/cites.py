@@ -11,7 +11,7 @@ from .norm import norm, key, is_persian
 YEAR = r"(?<!\d)(1[34]\d\d|19\d\d|20\d\d)(?!\d)"
 YEAR_RE = re.compile(YEAR)
 SUFFIX = r"(?:[a-z]|[آ-ی])?"
-STOP_NAMES = {"سال", "در", "از", "تا", "حدود", "حدودا", "year", "since", "in", "about", "around", "من", "ساعت", "مثلا", "مانند", "بین", "حدود"}
+STOP_NAMES = {"سال", "در", "از", "تا", "حدود", "حدودا", "year", "since", "in", "about", "around", "من", "ساعت", "مثلا", "مانند", "بین"}
 SEE = r"(?:see|cf\.?|e\.g\.,?|i\.e\.,?|مثلاً|نک\.?|ر\.ک\.?|رک\.?|به\s+نقل\s+از)\s+"
 ET_AL = re.compile(r"\s+(?:و\s*همکاران|et\s+al\.?|و\s+دیگران|و\s+ديگران)\s*$", re.I)
 

@@ -299,7 +299,6 @@ def _author_year(entries, cites, f, P) -> None:
 
 
 def _numeric(entries, cites, f, P) -> None:
-    nums = [e.number for e in entries]
     have = {e.number: e for e in entries if e.number is not None}
     # numbering of the list itself
     prob: List[str] = []
