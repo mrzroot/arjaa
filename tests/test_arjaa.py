@@ -3,9 +3,8 @@ import json
 import os
 import random
 
-import pytest
 
-from arjaa import checks, cli, cites, norm, structure
+from arjaa import checks, cli, norm, structure
 from arjaa.docxbuild import Doc
 from arjaa.docxio import load
 from arjaa import sample

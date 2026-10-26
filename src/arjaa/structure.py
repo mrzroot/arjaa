@@ -3,10 +3,10 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from .docxio import Document, Paragraph
-from .norm import norm, key, ascii_digits
+from .norm import norm, key
 
 ORD = {"اول": 1, "دوم": 2, "سوم": 3, "چهارم": 4, "پنجم": 5, "ششم": 6, "هفتم": 7, "هشتم": 8, "نهم": 9, "دهم": 10,
        "یازدهم": 11, "دوازدهم": 12, "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5, "sixth": 6,

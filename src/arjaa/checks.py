@@ -10,7 +10,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from . import cites as ct
 from . import structure as st
 from .docxio import Document
-from .norm import norm, key, alnum_key, is_persian, fa_digits, show
+from .norm import alnum_key, is_persian, fa_digits, show
 
 SEVERITY_ORDER = {"error": 0, "warn": 1, "info": 2}
 MAX_EX = 5
