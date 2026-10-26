@@ -9,6 +9,11 @@ def codes(findings):
     return {f.code for f in findings}
 
 
+def finding(findings, code):
+    """The first finding with the given *code*; raises StopIteration (a test failure) if there is none."""
+    return next(x for x in findings if x.code == code)
+
+
 def run(path, **kw):
     """Check the .docx at *path* with ``Options(**kw)``; returns ``(findings, info)``."""
     return checks.analyse(load(str(path)), checks.Options(**kw))

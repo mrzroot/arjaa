@@ -2,7 +2,7 @@
 from arjaa import sample, structure
 from arjaa.docxio import load
 
-from helpers import cap, codes, make, run, typed
+from helpers import cap, codes, finding, make, run, typed
 
 
 def test_sentence_starting_with_label_is_not_a_caption(tmp_path):
@@ -65,7 +65,7 @@ def test_gap_start_and_backwards(tmp_path):
         typed(d, "شکل ۲-۴: ب")
         typed(d, "شکل ۲-۳: ج")
     f, _ = run(make(tmp_path, b))
-    a102 = [x for x in f if x.code == "A102"][0]
+    a102 = finding(f, "A102")
     notes = " | ".join(e["note"] for e in a102.examples)
     assert "starts at 2" in notes and "skips" in notes and "goes back" in notes
     assert "۲-۳" in notes                                          # Persian digits for Persian labels
@@ -97,9 +97,9 @@ def test_dangling_unreferenced_and_label_mismatch(tmp_path):
     f, _ = run(make(tmp_path, b))
     c = codes(f)
     assert {"A201", "A202", "A203"} <= c
-    a201 = [x for x in f if x.code == "A201"][0]
+    a201 = finding(f, "A201")
     assert a201.count == 1 and "۲-۱" in a201.examples[0]["note"]
-    a202 = [x for x in f if x.code == "A202"][0]
+    a202 = finding(f, "A202")
     assert a202.count == 1                                          # only the figure; the table is mentioned
 
 
@@ -109,7 +109,7 @@ def test_single_number_mention_against_chapter_captions_gets_a_hint(tmp_path):
         cap(d, "شکل", 2, 1)
         d.p("شکل ۱ را ببینید.")
     f, _ = run(make(tmp_path, b))
-    a201 = [x for x in f if x.code == "A201"][0]
+    a201 = finding(f, "A201")
     assert "one number" in a201.examples[0]["note"]
 
 
@@ -129,7 +129,7 @@ def test_chapter_mention_beyond_last_chapter(tmp_path):
         d.heading("فصل دوم: ب", 1)
         d.p("نتایج در فصل ۷ و فصل دوم و فصل ۱ می‌آید و فصل سیزدهم نه.")
     f, _ = run(make(tmp_path, b))
-    a210 = [x for x in f if x.code == "A210"][0]
+    a210 = finding(f, "A210")
     assert a210.count == 1
 
 

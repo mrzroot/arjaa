@@ -1,5 +1,5 @@
 """Citations and the reference list (A3xx): author-year and numeric styles, years, duplicates, list boundaries."""
-from helpers import codes, make, run
+from helpers import codes, finding, make, run
 
 
 def refs_doc(tmp_path, body, refs, head="منابع", name="r.docx"):
@@ -89,7 +89,7 @@ def test_year_calendar_rules(tmp_path):
 def test_et_al_against_the_language_of_the_name(tmp_path):
     p = refs_doc(tmp_path, ["(رضایی et al., ۱۳۹۸) و (Smith و همکاران، 2020) و (Smith et al., 2020) و (رضایی و همکاران، ۱۳۹۸)."], [R_FA, R_EN])
     f, _ = run(p)
-    a334 = [x for x in f if x.code == "A334"][0]
+    a334 = finding(f, "A334")
     assert a334.count == 2
 
 
@@ -110,14 +110,14 @@ def test_no_reference_list(tmp_path):
         d.heading("فصل اول: مقدمه", 1)
         d.p("(Smith, 2020) و (Lee, 2019) و (Brown, 2018) آمده است.")
     f, _ = run(make(tmp_path, b))
-    a301 = [x for x in f if x.code == "A301"][0]
+    a301 = finding(f, "A301")
     assert a301.severity == "warn"
 
     def b2(d):
         d.heading("فصل اول: مقدمه", 1)
         d.p("متن ساده.")
     f2, _ = run(make(tmp_path, b2, "n.docx"))
-    assert [x for x in f2 if x.code == "A301"][0].severity == "info"
+    assert finding(f2, "A301").severity == "info"
 
 
 def test_reference_heading_variants(tmp_path):
