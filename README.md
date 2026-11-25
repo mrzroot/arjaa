@@ -24,6 +24,8 @@ number may be written `۲-۳`, `2-3` or `٢-٣`, or that a Persian entry is date
 
 ## Choose the right tool for your thesis
 
+See the [bilingual project guide](docs/index.html) for a worked example and the first commands to run.
+
 Keep the original Word file. Use each tool for the issue it is designed to find:
 
 - [payanlint](https://github.com/mrzroot/payanlint): Detect typing and Word formatting issues; start with a report and fix safe text issues only in a copy.
