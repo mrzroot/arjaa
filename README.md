@@ -22,6 +22,17 @@ that cited it. Word's cross-reference fields and a reference manager prevent all
 until the examiner finds `شکل ۲-۳` pointing at nothing. The tools I found for this check English-language manuscripts (see [NOVELTY.md](NOVELTY.md)); none of the ones I read about mentions that a chapter is called `فصل دوم`, that the caption
 number may be written `۲-۳`, `2-3` or `٢-٣`, or that a Persian entry is dated in the Jalali calendar and a Latin one is not.
 
+## Choose the right tool for your thesis
+
+Keep the original Word file. Use each tool for the issue it is designed to find:
+
+- [payanlint](https://github.com/mrzroot/payanlint): Detect typing and Word formatting issues; start with a report and fix safe text issues only in a copy.
+- **arjaa**: Check links from in-text mentions to captions and bibliography entries; reports only.
+- [vazhgun](https://github.com/mrzroot/vazhgun): Find bidirectional display issues around numbers, punctuation, paragraphs and tables; optional fixes write a copy.
+- [neveshtar](https://github.com/mrzroot/neveshtar): Flag spoken or template-like Persian phrasing; suggested edits can be reviewed as tracked changes.
+
+One possible order: check references and text direction first, then review the writing and formatting. Review any fixed copies in Word before replacing the original.
+
 ## 📦 Install
 
 Python 3.9+, no dependencies. Tested on Linux only.
